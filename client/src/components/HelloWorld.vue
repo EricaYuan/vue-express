@@ -80,16 +80,31 @@
         </a>
       </li>
     </ul>
+    <!-- js -->
+
   </div>
 </template>
 
 <script>
+// import Person from '../utils/index'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted () {
+    // let a = {n:1}
+    // let b = a
+    // a.x = a = {n:2}
+    // console.log(a,b)
+    let a = {}
+    let b = {}
+    console.log(a == b)
+  },
+  methods: {
+
   }
 }
 </script>
