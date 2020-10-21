@@ -1,4 +1,3 @@
-console.log('hi')
 const express = require('express')
 const bodyParser = require('body-parser') // process json data easily
 const cors = require('cors')
@@ -10,9 +9,9 @@ app.use(morgan('combine'))
 app.use(bodyParser.json()) // parse json express in a sentence
 app.use(cors()) // allow server can be hited from any domain
 
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
   res.send({
-    message: 'hello world!'
+    message: `Hi ${req.body.email}! 'you are registered!'`
   })
 })
 
